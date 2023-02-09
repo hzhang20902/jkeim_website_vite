@@ -4,6 +4,7 @@ import {
   Button, 
   SwipeableDrawer, 
   Divider,
+  Link,
   List,
   ListItem, 
   ListItemButton, 
@@ -11,11 +12,10 @@ import {
   ListItemText, 
   IconButton
 } from '@mui/material'
-import InboxIcon from '@mui/icons-material/MoveToInbox'
-import MenuIcon from '@mui/icons-material/Menu'
-import MailIcon from '@mui/icons-material/Mail'
+
 import { GiDrum, GiSandwich, GiMusicalScore, GiDrumKit } from 'react-icons/gi'
 import { SiGmail } from 'react-icons/si'
+import { IoMdSchool } from 'react-icons/io'
 
 
 export default function Sidebar() {
@@ -47,16 +47,20 @@ export default function Sidebar() {
     >
       <List>
         {['Home', 'School of Rhythm', 'Lessons'].map((text, index) => (
+         <Link href={index !== 1 || 2 ? index === 1 ? '/about' : '/register' : '/'} sx={{textDecoration: 'none', color: 'inherit'}}>
           <ListItem key={text} disablePadding>
+             
             <ListItemButton>
               <ListItemIcon>
                 {index === 2 ? <GiDrumKit size='1.7em'/> : null}
-                {index === 1 ? <GiSandwich size='1.7em'/> : null}
+                {index === 1 ? <IoMdSchool size='1.7em'/> : null}
                 {index === 0 ? <GiDrum size='1.7em'/> : null}
               </ListItemIcon>
               <ListItemText primary={text} />
             </ListItemButton>
+            
           </ListItem>
+          </Link>
         ))}
       </List>
       <Divider />
@@ -86,7 +90,7 @@ export default function Sidebar() {
               aria-label="menu"
               sx={{ mr: 2 }}
             >
-              <MenuIcon sx={{color:'#FFC363'}}/>
+              <GiSandwich style={{color:'#FFC363'}}/>
             </IconButton>
           </Button>
         <SwipeableDrawer
