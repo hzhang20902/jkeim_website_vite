@@ -21,7 +21,7 @@ export default function Appbar() {
             <Link href='/'>
             <Box component='img' src={Logo} sx={{marginTop: 1, height: '85px'}} className='logo' />
             </Link>
-            <Button color="inherit" disableRipple disableFocusRipple>
+            <Button color="inherit" className='cart'>
                 <ShoppingCartIcon sx={{color:'#FFC363'}}/>
             </Button>
         </Toolbar>

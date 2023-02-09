@@ -1,17 +1,21 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
-import Drawer from '@mui/material/Drawer';
-import Button from '@mui/material/Button';
-import List from '@mui/material/List';
-import Divider from '@mui/material/Divider';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
+import { 
+  Box, 
+  Button, 
+  SwipeableDrawer, 
+  Divider,
+  List,
+  ListItem, 
+  ListItemButton, 
+  ListItemIcon, 
+  ListItemText, 
+  IconButton
+} from '@mui/material'
+import InboxIcon from '@mui/icons-material/MoveToInbox'
+import MenuIcon from '@mui/icons-material/Menu'
+import MailIcon from '@mui/icons-material/Mail'
+import { GiDrum, GiSandwich, GiMusicalScore, GiDrumKit } from 'react-icons/gi'
+import { SiGmail } from 'react-icons/si'
 
 
 export default function Sidebar() {
@@ -42,11 +46,13 @@ export default function Sidebar() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {['Home', 'School of Rhythm', 'Director'].map((text, index) => (
+        {['Home', 'School of Rhythm', 'Lessons'].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                {index === 2 ? <GiDrumKit size='1.7em'/> : null}
+                {index === 1 ? <GiSandwich size='1.7em'/> : null}
+                {index === 0 ? <GiDrum size='1.7em'/> : null}
               </ListItemIcon>
               <ListItemText primary={text} />
             </ListItemButton>
@@ -55,13 +61,14 @@ export default function Sidebar() {
       </List>
       <Divider />
       <List>
-        {['Contact', 'Joseph Keim'].map((text, index) => (
+        {['Joseph Keim', 'Shop'].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                {index % 2 === 0 ? <MailIcon /> : <InboxIcon />}
+                {index === 0 ? <SiGmail size='1.7em'/> : null}
+                {index === 1 ? <GiMusicalScore size='1.7em'/> : null}
               </ListItemIcon>
-              <ListItemText primary={text} />
+              <ListItemText primary={text}/>
             </ListItemButton>
           </ListItem>
         ))}
@@ -72,28 +79,28 @@ export default function Sidebar() {
   return (
     <div>
       <React.Fragment>
-          <Button onClick={toggleDrawer('menu', true)} disableFocusRipple disableRipple>
+          <Button onClick={toggleDrawer('menu', true)} sx={{"&:hover": {backgroundColor: "transparent", }}} className='menu' disableFocusRipple disableRipple>
             <IconButton
               size="large"
               edge="start"
               aria-label="menu"
-              disableFocusRipple
-              disableTouchRipple
               sx={{ mr: 2 }}
             >
-              <MenuIcon sx={{color:'#FFC363',}}/>
+              <MenuIcon sx={{color:'#FFC363'}}/>
             </IconButton>
           </Button>
-        <Drawer
+        <SwipeableDrawer
           hideBackdrop={false}
           PaperProps={{
-            sx: {backgroundColor:"#FFC363"}
+            sx: {backgroundColor:"#FFC363", fontFamily:"Inter, system-ui, Avenir, Helvetica, Arial, sans-serif"}
           }}
           open={state['menu']}
           onClose={toggleDrawer('menu', false)}
+          onOpen={toggleDrawer('menu', true)}
+          transitionDuration={450}
         >
           {list('menu')}
-        </Drawer>
+        </SwipeableDrawer>
       </React.Fragment>
     </div>
   );

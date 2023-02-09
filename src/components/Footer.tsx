@@ -1,8 +1,8 @@
-import React from 'react'
+import { CgCopyright } from 'react-icons/cg'
 
 const Footer = () => {
   return (
-    <div>Footer</div>
+    <div><CgCopyright />2023 Henry Zhang</div>
   )
 }
 

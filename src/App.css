@@ -13,24 +13,50 @@ body {
 
 footer {
   display: flex;
+  font-size: smaller;
   flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
+  padding: 1em;
+  width: 100%;
+  color: #5E2315;
+  border-top: 1px solid #5E2315;
   justify-content: center;
   align-items: center;
   position: fixed;
   bottom: 0;
+  left: 0;
 }
 
 .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
-  transition: filter 300ms;
+  transition: filter 350ms;
 }
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
+.menu {
+  height: 1.7em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 350ms;
+}
+.menu:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.cart {
+  height: 4em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 350ms;
+}
+.cart:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
