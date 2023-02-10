@@ -18,6 +18,7 @@ function App() {
             <Route path="/about" element={<Bio />} />
             <Route path="/register" element={<Register />} />
             <Route path="/contact" element={<Contact />} />
+
         </Routes>
         </body>
       <footer>

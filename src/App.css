@@ -13,12 +13,13 @@ body {
 
 footer {
   display: flex;
-  font-size: smaller;
+  font-size: xx-small;
   flex: 1;
   padding: 1em;
   width: 100%;
+  opacity: 0.2;
   color: #5E2315;
-  border-top: 1px solid #5E2315;
+  /* border-top: 1px solid #5E2315; */
   justify-content: center;
   align-items: center;
   position: fixed;
@@ -96,4 +97,8 @@ footer {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
+}
+
+p {
+  color: #5E2315;
 }

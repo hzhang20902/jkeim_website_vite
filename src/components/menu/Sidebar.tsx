@@ -46,8 +46,8 @@ export default function Sidebar() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {['Home', 'School of Rhythm', 'Lessons'].map((text, index) => (
-         <Link href={index !== 1 || 2 ? index === 1 ? '/about' : '/register' : '/'} sx={{textDecoration: 'none', color: 'inherit'}}>
+        {['Home', 'Philly Rhythm', 'Lessons'].map((text, index) => (
+         <Link href={index === 2 || index === 1 ? index === 1 ? '/about' : '/register' : '/'} sx={{textDecoration: 'none', color: 'inherit'}}>
           <ListItem key={text} disablePadding>
              
             <ListItemButton>
@@ -66,6 +66,7 @@ export default function Sidebar() {
       <Divider />
       <List>
         {['Joseph Keim', 'Shop'].map((text, index) => (
+          <Link href={index === 0? '/contact' : '/shop'} sx={{textDecoration: 'none', color: 'inherit'}}>
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
@@ -75,6 +76,7 @@ export default function Sidebar() {
               <ListItemText primary={text}/>
             </ListItemButton>
           </ListItem>
+          </Link>
         ))}
       </List>
     </Box>
