@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom'
 import './App.css'
 
-import Bio from './components/Bio'
+import School from './components/School'
 import Footer from './components/Footer'
 import Home from './components/Home'
 import Register from './components/Register'
@@ -15,7 +15,7 @@ function App() {
       <body>
         <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/about" element={<Bio />} />
+            <Route path="/about" element={<School />} />
             <Route path="/register" element={<Register />} />
             <Route path="/contact" element={<Contact />} />
 

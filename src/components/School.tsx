@@ -2,22 +2,22 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
-import { Headshot } from './Images';
+import { About } from './Images';
 
 const card = (
   <React.Fragment>
     <CardContent>
-      <Headshot />
+      <About />
     </CardContent>
   </React.Fragment>
 );
 
-export default function Contact() {
+export default function School() {
   return (
-  <Box gridRow={2}>
-    <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', paddingTop: '6.8em'}}>
-      <Card className='fadeLeftMini' variant="outlined" raised sx={{margin: '15px', backgroundColor: "#FFC363", width: 'auto', position: 'sticky'}}>{card}</Card>
-      <h1 className='fadeRightMini'>About The Director</h1>
+  <Box gridRow={2} sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', paddingTop: '6.8em', flexDirection: 'column'}}>
+    <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', paddingTop: '6.8em', flexDirection: 'column'}}>
+      <Card className='fadeLeftMini' variant="outlined" raised sx={{margin: '15px', backgroundColor: "#FFC363", width: 'auto'}}>{card}</Card>
+      <h1 className='fadeRightMini'>About The Program/School</h1>
     </Box>
     <Box className='fadeLeftMini' sx={{display: 'flex', justifyContent: 'center', alignItems: 'center'}} >
       <Card variant="outlined" raised sx={{backgroundColor: "#FFC363", width: '75%'}}>

@@ -16,8 +16,8 @@ const card = (
 
 export default function Home() {
   return (
-    <Box sx={{padding: '6.1em'}}>
-      <Card variant="outlined" raised sx={{margin: '10px', backgroundColor: "#FFC363", position: 'relative', maxWidth: "850px"}}>{card}</Card>
+    <Box gridRow={2} sx={{padding: '6.8em', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', objectFit: 'contain', width: '75%'}}>
+      <Card variant="outlined" raised sx={{margin: '10px', backgroundColor: "#FFC363", maxWidth: '75%'}}>{card}</Card>
       <h1>Philly Rhythm</h1>
     </Box>
   );

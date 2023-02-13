@@ -17,8 +17,8 @@ import { IoMdSchool } from 'react-icons/io'
 
 export default function Appbar() {
   return (
-    <Box sx={{ flexGrow: 1, left: 0, width: '100%', zIndex: 1 }}>
-      <AppBar color='transparent' elevation={0}>
+    <Box sx={{ flexGrow: 1, left: 0, width: '100%', zIndex: 1}}>
+      <AppBar elevation={0} sx={{backgroundColor: '#FFFFE8' }}>
         <Toolbar sx={{display: 'flex', justifyContent: 'space-between', paddingX: '20%'}}>
             
             <Sidebar />

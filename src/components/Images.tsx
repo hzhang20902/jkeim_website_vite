@@ -1,43 +1,18 @@
-import { useContext } from "react";
 import React from "react";
-import { ScrollMenu, VisibilityContext } from "react-horizontal-scrolling-menu";
-import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
+import { ScrollMenu } from "react-horizontal-scrolling-menu";
 import { Box } from "@mui/material";
-import t1 from '../assets/tourphoto1.jpeg'
-import t2 from '../assets/headshot.png'
-import t3 from '../assets/colorbacklogo.jpeg'
+import assets from '../assets'
 
-const slides = [t1, 'https://thumbs.dreamstime.com/z/happy-people-6077227.jpg', t3]
+const slides = [assets.wlogo, assets.s1, assets.s2, assets.s3, assets.s4, assets.s5, assets.t1, assets.clogo]
 
-const face = t2
+const face = assets.headshot
 
-// const LeftArrow = () => {
-//     const { scrollPrev } = useContext(VisibilityContext);
+const about = assets.clogo
 
-//     return (
-//         <Box>
-//             <FaArrowAltCircleLeft
-//             onClick={() => scrollPrev()}
-//             cursor='pointer' />
-//         </Box>
-//     )
-// }
-
-// const RightArrow = () => {
-//     const { scrollNext } = useContext(VisibilityContext);
-
-//     return (
-//         <Box>
-//             <FaArrowAltCircleRight
-//             onClick={() => scrollNext()}
-//             cursor='pointer' />
-//         </Box>
-//     )
-// }
 export const Slideshow = () => {
     return(
     <React.Fragment>
-    <ScrollMenu>
+    <ScrollMenu transitionBehavior='auto' transitionDuration={300}>
            {slides.map((slide, index) => (<Box key={index} component='img' overflow='hidden' src={slide} className='images'/>))}
     </ScrollMenu>
     </React.Fragment>
@@ -47,8 +22,18 @@ export const Slideshow = () => {
 export const Headshot = () => {
     return (
     <React.Fragment>
-    <ScrollMenu transitionBehavior='auto' transitionDuration={300}>
+    <ScrollMenu>
            <Box component='img' overflow='hidden' src={face} className='images'/>
+    </ScrollMenu>
+    </React.Fragment>
+    )
+}
+
+export const About = () => {
+    return (
+    <React.Fragment>
+    <ScrollMenu>
+           <Box component='img' overflow='hidden' src={about} className='images'/>
     </ScrollMenu>
     </React.Fragment>
     )
