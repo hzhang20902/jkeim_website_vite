@@ -18,7 +18,7 @@ import {
 
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
-import axios, { Axios } from 'axios';
+import axios from 'axios';
 
 const card = (
   <React.Fragment>
@@ -29,7 +29,7 @@ const card = (
 );
 
 const registerSubmit = (data: { parentName: string; email: string; phone: string; city: string; state: string; zipcode: string; studentName: string; pronouns: string; message: string; instruments: string; }) => {
-  return axios.post( "https://expressapicontactform.herokuapp.com/contact", {
+  return axios.post( "https://expressapicontactform.herokuapp.com/register", {
       parentName: data.parentName,
       email: data.email,
       phone: data.phone,
@@ -118,7 +118,7 @@ setOpen(false)
     <Card className='fadeLeftMini' variant="outlined" raised sx={{margin: '15px', backgroundColor: "#FFC363", width: 'auto', position: 'sticky'}}>{card}</Card>
            <Card className='fadeLeftMini' variant="outlined" raised sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', padding: '3em', backgroundColor: "#FFC363"}}>
             <h3>Contact Info:</h3>
-           <form onSubmit={handleSubmit(onSubmit)} style={{}}>
+           <form onSubmit={handleSubmit(onSubmit)}>
               <TextField
                 margin="normal"
                 type="text"
