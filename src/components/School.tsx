@@ -14,7 +14,7 @@ const card = (
 
 export default function School() {
   return (
-  <Box gridRow={2} sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', paddingTop: '6.8em', flexDirection: 'column'}}>
+  <Box gridRow={2} sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', paddingTop: '2em', flexDirection: 'column'}}>
     <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', paddingTop: '6.8em', flexDirection: 'column'}}>
       <Card className='fadeLeftMini' variant="outlined" raised sx={{margin: '15px', backgroundColor: "#FFC363", width: 'auto'}}>{card}</Card>
       <h1 className='fadeRightMini'>About The Program/School</h1>

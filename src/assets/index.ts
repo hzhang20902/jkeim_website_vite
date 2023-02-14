@@ -7,9 +7,11 @@ import s3 from './stock3.jpeg'
 import s4 from './stock4.jpeg'
 import s5 from './stock5.jpeg'
 import t1 from './tourphoto1.jpeg'
+import b1 from './band1.jpeg'
 
 
 export default {
+    b1,
     wlogo,
     headshot,
     clogo,

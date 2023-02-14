@@ -5,6 +5,8 @@ import assets from '../assets'
 
 const slides = [assets.wlogo, assets.s1, assets.s2, assets.s3, assets.s4, assets.s5, assets.t1, assets.clogo]
 
+const band = assets.b1
+
 const face = assets.headshot
 
 const about = assets.clogo
@@ -34,6 +36,16 @@ export const About = () => {
     <React.Fragment>
     <ScrollMenu>
            <Box component='img' overflow='hidden' src={about} className='images'/>
+    </ScrollMenu>
+    </React.Fragment>
+    )
+}
+
+export const Formheading = () => {
+    return (
+    <React.Fragment>
+    <ScrollMenu>
+           <Box component='img' overflow='hidden' src={band} className='images'/>
     </ScrollMenu>
     </React.Fragment>
     )
