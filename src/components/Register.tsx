@@ -29,7 +29,7 @@ const card = (
   </React.Fragment>
 );
 
-const registerSubmit = (data: { parentName: string; email: string; phone: string; city: string; state: string; zipcode: string; studentName: string; pronouns: string; message: string; instrument: string; }) => {
+const registerSubmit = (data: { parentName: string; email: string; phone: string; city: string; state: string; zipcode: string; studentName: string; pronouns: string; message: string; instruments: string; }) => {
   return axios.post( "https://expressapicontactform.herokuapp.com/contact", {
       parentName: data.parentName,
       email: data.email,
@@ -40,7 +40,7 @@ const registerSubmit = (data: { parentName: string; email: string; phone: string
       studentName: data.studentName,
       pronouns: data.pronouns,
       message: data.message,
-      instrument: data.instrument,
+      instruments: data.instruments,
   })
 };
 
