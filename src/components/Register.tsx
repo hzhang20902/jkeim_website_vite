@@ -4,13 +4,12 @@ import { Formheading } from './Images';
 import { 
   Alert,
   Box,
+  Button,
   Card,
   CardContent,
   FormControl,
-  Grid,
   InputLabel,
   MenuItem,
-  Paper,
   Select,
   SelectChangeEvent,
   Snackbar,
@@ -241,6 +240,13 @@ setOpen(false)
                 id="instruments"
                 {...register("instruments", { required: true })}
               />
+              <Button
+                type="submit"
+                variant="contained"
+                sx={{backgroundColor: '#5E2315', color: '#FFC363', margin: '1em'}}
+              >
+                {status}
+              </Button>
 
               <Typography sx={{ color: 'red', textAlign: 'center' }}>
               {resMessage && `${resMessage}`}
