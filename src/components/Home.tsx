@@ -13,9 +13,18 @@ const card = (
 );
 
 export default function Home() {
+
+  React.useEffect(() => {
+    window.scrollBy({
+      top: 0,
+      left: 100,
+      behavior: 'smooth'
+    });
+  }, [])
+
   return (
-    <Box sx={{paddingTop:'7em', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', objectFit: 'fill', width: '100%'}}>
-      <Card variant="outlined" raised sx={{margin: '10px', backgroundColor: "#FFC363", maxWidth: '75%'}}>{card}</Card>
+    <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', objectFit: 'fill', width: '100%'}}>
+      <Card variant="outlined" raised sx={{backgroundColor: "#FFC363", maxWidth: '75%'}}>{card}</Card>
       <h1>Philly Rhythm</h1>
       <Card className='descrip' variant="outlined" raised sx={{backgroundColor: "#FFC363"}}>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rhoncus ipsum nec dolor rutrum fringilla. 

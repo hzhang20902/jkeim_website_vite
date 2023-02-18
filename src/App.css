@@ -12,8 +12,10 @@ header {
 }
 body {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  width: auto;
+  padding-top: 4em;
 }
 
 footer {
@@ -91,6 +93,16 @@ footer {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes images-scroll{
+  from {
+    scroll-behavior: smooth;
+    scroll-timeline: initial;
+  }
+  to {
+    scroll-timeline: unset;
   }
 }
 

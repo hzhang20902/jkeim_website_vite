@@ -8,7 +8,7 @@ import s4 from './stock4.jpeg'
 import s5 from './stock5.jpeg'
 import t1 from './tourphoto1.jpeg'
 import b1 from './band1.jpeg'
-
+import err from './404page.webp'
 
 export default {
     b1,
@@ -20,5 +20,6 @@ export default {
     s3,
     s4,
     s5,
-    t1
+    t1,
+    err
 }

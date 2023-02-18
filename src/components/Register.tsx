@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import React from 'react';
 import { Formheading } from './Images';
 import { 
@@ -76,6 +76,15 @@ export function StateSelect() {
 }
 
 export default function Register() {
+
+  useEffect(() => {
+    window.scrollBy({
+      top: 0,
+      left: 100,
+      behavior: 'smooth'
+    });
+  }, [])
+
   const [status, setStatus] = useState("Submit");
   const [resMessage, setResMessage] = useState('');
   const navigate = useNavigate();
@@ -105,10 +114,8 @@ const onSubmit = async (data: any) => {
 };
 
   return (
-    <Box gridRow={3} gridColumn={3}>
-    <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', paddingTop: '6.8em'}}>
+    <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', objectFit: 'fill', width: '100%'}}>
       <h1 className='fadeRightMini'>Sign Up Today!</h1>
-    </Box>
     
            <Card className='fadeLeftMini' variant="outlined" raised sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', padding: '3em', backgroundColor: "#FFC363"}}>
             <h3>Contact Info:</h3>
@@ -147,7 +154,6 @@ const onSubmit = async (data: any) => {
                 fullWidth
                 id="phone"
                 label="Phone No."
-                autoFocus
                 {...register("phone", { required: true })}
               />
               <Typography sx={{ color: 'red', textAlign: 'center' }}>
@@ -161,7 +167,6 @@ const onSubmit = async (data: any) => {
                 required
                 id="city"
                 label="City"
-                autoFocus
                 {...register("city", { required: true })}
               />
 
@@ -175,7 +180,6 @@ const onSubmit = async (data: any) => {
                 required
                 id="zipcode"
                 label="ZIP"
-                autoFocus
                 {...register("zipcode", { required: true })}
               />
               <Typography sx={{ color: 'red', textAlign: 'center' }}>
@@ -191,7 +195,6 @@ const onSubmit = async (data: any) => {
                 fullWidth
                 id="studentName"
                 label="Student's Name"
-                autoFocus
                 {...register("studentName", { required: true })}
               />
               <Typography sx={{ color: 'red', textAlign: 'center' }}>
@@ -202,7 +205,6 @@ const onSubmit = async (data: any) => {
                 type="text"
                 id="pronouns"
                 label="Preferred Pronouns"
-                autoFocus
                 {...register("pronouns", { required: true })}
               />
             </Box>
@@ -247,7 +249,7 @@ const onSubmit = async (data: any) => {
             </Typography>
             </form>
             </Card>
-            <Card className='fadeLeftMini' variant="outlined" raised sx={{margin: '15px', backgroundColor: "#FFC363", width: 'auto', position: 'sticky'}}>{card}</Card>
+            <Card className='fadeLeftMini' variant="outlined" raised sx={{margin: '15px', backgroundColor: "#FFC363", width: 'auto'}}>{card}</Card>
 
   </Box>
   );

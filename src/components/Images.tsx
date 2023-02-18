@@ -11,6 +11,8 @@ const face = assets.headshot
 
 const about = assets.clogo
 
+const error = assets.err
+
 export const Slideshow = () => {
     return(
     <React.Fragment>
@@ -46,6 +48,16 @@ export const Formheading = () => {
     <React.Fragment>
     <ScrollMenu>
            <Box component='img' overflow='hidden' src={band} className='images'/>
+    </ScrollMenu>
+    </React.Fragment>
+    )
+}
+
+export const NotFound = () => {
+    return (
+    <React.Fragment>
+    <ScrollMenu>
+           <Box component='img' overflow='hidden' src={error} className='images'/>
     </ScrollMenu>
     </React.Fragment>
     )

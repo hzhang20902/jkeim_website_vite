@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useEffect } from 'react';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -13,8 +13,17 @@ const card = (
 );
 
 export default function School() {
+
+  useEffect(() => {
+    window.scrollBy({
+      top: 0,
+      left: 100,
+      behavior: 'smooth'
+    });
+  }, [])
+
   return (
-  <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', paddingTop: '7em', flexDirection: 'column',  objectFit: 'fill', width: '100%'}}>
+  <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column',  objectFit: 'fill', width: '100%'}}>
     <Card className='fadeLeftMini' variant="outlined" raised sx={{margin: '10px', backgroundColor: "#FFC363", width: 'auto'}}>{card}</Card>
     <h1 className='fadeRightMini'>About The Program</h1>
     <Card className='descrip' variant="outlined" raised sx={{backgroundColor: "#FFC363"}}>

@@ -13,14 +13,20 @@ const card = (
 );
 
 export default function Contact() {
+
+  React.useEffect(() => {
+    window.scrollBy({
+      top: 0,
+      left: 100,
+      behavior: 'smooth'
+    });
+  }, [])
+  
   return (
-  <Box gridRow={2}>
-    <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', paddingTop: '6.8em'}}>
-      <Card className='fadeLeftMini' variant="outlined" raised sx={{margin: '15px', backgroundColor: "#FFC363", width: 'auto', position: 'sticky'}}>{card}</Card>
+    <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column',  objectFit: 'fill', width: '100%'}}>
+      <Card className='fadeLeftMini' variant="outlined" raised sx={{backgroundColor: "#FFC363", width: 'auto'}}>{card}</Card>
       <h1 className='fadeRightMini'>About The Director</h1>
-    </Box>
-    <Box className='fadeLeftMini' sx={{display: 'flex', justifyContent: 'center', alignItems: 'center'}} >
-      <Card variant="outlined" raised sx={{backgroundColor: "#FFC363", width: '75%'}}>
+      <Card className='descrip' variant="outlined" raised sx={{backgroundColor: "#FFC363", width: '75%'}}>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rhoncus ipsum nec dolor rutrum fringilla. 
             Suspendisse maximus bibendum lorem, in feugiat diam viverra at. 
             Quisque rhoncus molestie lacinia. Vivamus purus lectus, tincidunt quis sollicitudin quis, pretium iaculis erat. 
@@ -35,6 +41,5 @@ export default function Contact() {
             Donec nibh diam, aliquet a erat sit amet, rhoncus congue sem. Donec id vulputate elit.</p>
       </Card>
     </Box>
-  </Box>
   );
 }

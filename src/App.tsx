@@ -7,6 +7,7 @@ import Home from './components/Home'
 import Register from './components/Register'
 import Appbar from './components/menu/Appbar'
 import Contact from './components/Contact'
+import ErrorPage from './components/Error'
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
             <Route path="/about" element={<School />} />
             <Route path="/register" element={<Register />} />
             <Route path="/contact" element={<Contact />} />
-
+            <Route path="*" element={<ErrorPage />} />
         </Routes>
       </body>
       <footer>
