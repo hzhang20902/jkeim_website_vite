@@ -11,7 +11,9 @@ import Contact from './components/Contact'
 function App() {
   return (
     <div className="App">
-      <Appbar />
+      <header>
+        <Appbar />
+      </header>
       <body>
         <Routes>
             <Route path="/" element={<Home />} />
@@ -20,7 +22,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
 
         </Routes>
-        </body>
+      </body>
       <footer>
         <Footer />
       </footer>

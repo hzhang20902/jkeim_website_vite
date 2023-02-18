@@ -23,7 +23,7 @@ export default function Appbar() {
             
             <Sidebar />
 
-            <Link href='/about'>
+            <Link href='/register'>
                 <Button color="inherit" className='cart'>
                     <IoMdSchool style={{color:'#FFC363'}} size='medium'/>
                 </Button>

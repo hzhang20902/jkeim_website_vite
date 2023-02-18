@@ -5,9 +5,14 @@
   text-align: center;
 }
 
-body {
+header {
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+body {
+  display: flex;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -31,6 +36,18 @@ footer {
   display: flex;
   height: 67vh;
   object-fit: cover;
+}
+
+@media (max-width: 600px){
+  .images {
+    height: 33vh;
+  }
+}
+
+.descrip {
+  margin: 10px;
+  max-width: 75%;
+  padding: 1em;
 }
 
 .logo {
@@ -83,9 +100,17 @@ footer {
   }
 }
 
+
 p {
   color: #5E2315;
 }
+
+@media (max-width: 600px){
+  p {
+  font-size: x-small;
+  }
+}
+
 
 .fadeLeftMini {
   animation: fadeLeftMini 1s;

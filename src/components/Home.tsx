@@ -14,10 +14,10 @@ const card = (
 
 export default function Home() {
   return (
-    <Box gridRow={2} sx={{padding: '6.8em', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', objectFit: 'contain', width: '75%'}}>
+    <Box sx={{paddingTop:'7em', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', objectFit: 'fill', width: '100%'}}>
       <Card variant="outlined" raised sx={{margin: '10px', backgroundColor: "#FFC363", maxWidth: '75%'}}>{card}</Card>
       <h1>Philly Rhythm</h1>
-      <Card variant="outlined" raised sx={{margin: '10px', backgroundColor: "#FFC363", maxWidth: '75%'}}>
+      <Card className='descrip' variant="outlined" raised sx={{backgroundColor: "#FFC363"}}>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rhoncus ipsum nec dolor rutrum fringilla. 
             Suspendisse maximus bibendum lorem, in feugiat diam viverra at. 
             Quisque rhoncus molestie lacinia. Vivamus purus lectus, tincidunt quis sollicitudin quis, pretium iaculis erat. 

@@ -52,9 +52,9 @@ export default function Sidebar() {
              
             <ListItemButton>
               <ListItemIcon>
-                {index === 2 ? <GiDrumKit size='1.7em'/> : null}
-                {index === 1 ? <IoMdSchool size='1.7em'/> : null}
                 {index === 0 ? <GiDrum size='1.7em'/> : null}
+                {index === 1 ? <GiDrumKit size='1.7em'/> : null}
+                {index === 2 ? <IoMdSchool size='1.7em'/> : null}
               </ListItemIcon>
               <ListItemText primary={text} />
             </ListItemButton>

@@ -2,7 +2,6 @@ import { useState } from 'react';
 import React from 'react';
 import { Formheading } from './Images';
 import { 
-  Alert,
   Box,
   Button,
   Card,
@@ -12,7 +11,6 @@ import {
   MenuItem,
   Select,
   SelectChangeEvent,
-  Snackbar,
   TextField,
   Typography } from '@mui/material'
 
@@ -28,7 +26,13 @@ const card = (
   </React.Fragment>
 );
 
-const registerSubmit = (data: { parentName: string; email: string; phone: string; city: string; state: string; zipcode: string; studentName: string; pronouns: string; message: string; instruments: string; }) => {
+const registerSubmit = (data: { 
+  parentName: string; 
+  email: string; 
+  phone: string; 
+  city: string; 
+  state: string; 
+  zipcode: string; studentName: string; pronouns: string; message: string; instruments: string; }) => {
   return axios.post( "https://expressapicontactform.herokuapp.com/register", {
       parentName: data.parentName,
       email: data.email,
@@ -41,6 +45,7 @@ const registerSubmit = (data: { parentName: string; email: string; phone: string
       message: data.message,
       instruments: data.instruments,
   })
+ 
 };
 
 export function StateSelect() {
@@ -63,7 +68,7 @@ export function StateSelect() {
           label="State"
           onChange={handleChange}
         >
-          {stateList.map((state, index) => (<MenuItem value={index}>{state}</MenuItem>))}
+          {stateList.map((state, index) => (<MenuItem value={(index+1)*10}>{state}</MenuItem>))}
         </Select>
       </FormControl>
     </Box>
@@ -71,7 +76,6 @@ export function StateSelect() {
 }
 
 export default function Register() {
-  const [open, setOpen] = useState(false);
   const [status, setStatus] = useState("Submit");
   const [resMessage, setResMessage] = useState('');
   const navigate = useNavigate();
@@ -89,7 +93,6 @@ const onSubmit = async (data: any) => {
   response.then((response) => {
       if (response.status === 200) {
           console.log(response.data);
-          setOpen(true)
       }
      
   })
@@ -98,24 +101,15 @@ const onSubmit = async (data: any) => {
   })
   alert((await response).data.status);
   setStatus("Submit");
-  window.location.reload()
   navigate('/')
 };
-
-const handleClose = (event: any, reason: string) => {
-if (reason === 'clickaway') {
-  return;
-}
-setOpen(false)
-};
-
 
   return (
     <Box gridRow={3} gridColumn={3}>
     <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', paddingTop: '6.8em'}}>
       <h1 className='fadeRightMini'>Sign Up Today!</h1>
     </Box>
-    <Card className='fadeLeftMini' variant="outlined" raised sx={{margin: '15px', backgroundColor: "#FFC363", width: 'auto', position: 'sticky'}}>{card}</Card>
+    
            <Card className='fadeLeftMini' variant="outlined" raised sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', padding: '3em', backgroundColor: "#FFC363"}}>
             <h3>Contact Info:</h3>
            <form onSubmit={handleSubmit(onSubmit)}>
@@ -170,11 +164,11 @@ setOpen(false)
                 autoFocus
                 {...register("city", { required: true })}
               />
-              <StateSelect />
+
               <Typography sx={{ color: 'red', textAlign: 'center' }}>
               {errors?.city && 'City cannot be blank!'}
             </Typography>
-            
+            <StateSelect />
             <TextField
                 margin='none'
                 type="text"
@@ -253,12 +247,7 @@ setOpen(false)
             </Typography>
             </form>
             </Card>
-
-          <Snackbar open={open} autoHideDuration={7000} onClose={handleClose}>
-            <Alert severity='success'>
-              Submitted Successfully! Our instructors will reach out to you soon.
-            </Alert>
-          </Snackbar>
+            <Card className='fadeLeftMini' variant="outlined" raised sx={{margin: '15px', backgroundColor: "#FFC363", width: 'auto', position: 'sticky'}}>{card}</Card>
 
   </Box>
   );
