@@ -3,7 +3,7 @@ import { ScrollMenu } from "react-horizontal-scrolling-menu";
 import { Box } from "@mui/material";
 import assets from '../assets'
 
-const slides = [assets.wlogo, assets.s1, assets.s2, assets.s3, assets.s4, assets.s5, assets.t1, assets.clogo]
+const slides = [assets.wlogo, assets.t1, assets.t2, assets.t3, assets.t4, assets.t5, assets.t6, assets.clogo]
 
 const band = assets.b1
 

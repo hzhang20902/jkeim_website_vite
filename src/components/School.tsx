@@ -27,18 +27,22 @@ export default function School() {
     <Card className='fadeLeftMini' variant="outlined" raised sx={{margin: '10px', backgroundColor: "#FFC363", width: 'auto'}}>{card}</Card>
     <h1 className='fadeRightMini'>About The Program</h1>
     <Card className='descrip' variant="outlined" raised sx={{backgroundColor: "#FFC363"}}>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rhoncus ipsum nec dolor rutrum fringilla. 
-          Suspendisse maximus bibendum lorem, in feugiat diam viverra at. 
-          Quisque rhoncus molestie lacinia. Vivamus purus lectus, tincidunt quis sollicitudin quis, pretium iaculis erat. 
-          Vivamus sodales elementum tortor, sit amet sagittis neque efficitur ac. Nunc finibus hendrerit maximus. 
-          Mauris lacinia scelerisque mauris, nec dapibus ex laoreet sit amet. Nam vel justo eget diam facilisis eleifend ut vel erat. 
-          Quisque sit amet tempor nisl. Phasellus cursus placerat justo, sed sagittis orci congue sit amet. Phasellus convallis ante finibus finibus maximus. 
-          Pellentesque non efficitur arcu, lacinia egestas nulla. Duis imperdiet risus ante. Morbi sem magna, dignissim quis pharetra vitae, 
-          gravida sit amet velit. Curabitur eu luctus libero. Curabitur et laoreet massa. Vestibulum egestas maximus mi eu ultricies. 
-          Pellentesque lacinia auctor nisl, et dictum nibh pharetra sit amet.
-          Maecenas quis justo neque. Sed euismod finibus aliquet. Aenean tempus ultrices nibh, vitae cursus mauris lacinia non. 
-          Suspendisse ac ligula urna. Nam eu ante sagittis felis convallis tincidunt. Ut ullamcorper nibh eu erat molestie placerat. 
-          Donec nibh diam, aliquet a erat sit amet, rhoncus congue sem. Donec id vulputate elit.</p>
+      <p>Philly Rhythm was established by Joseph Keim in 2021. Students receive weekly, private lessons and are groomed not only to become better musicians, but better problem solvers, communicators, and leaders. After only a few drum lessons, students will know how to:
+Read music
+Write music
+Keep time in different time signatures 
+Improvise
+Play a variety of genres and styles
+Philly Rhythm’s core purpose is to ignite a passion for learning. We believe that continuous improvement is a lifestyle. At this school, students don’t wait to be great. They funnel passion and curiosity into the tank of discipline that fuels a culture of excellence. Students are given opportunities that are handpicked according to their needs. Opportunities include joining an ensemble, performing live, starring in drum cover videos, and more. Register your student here.
+
+Philly Rhythm is…
+
+-An environment where students feel valued and know their efforts matter. 
+
+-An opportunity to experience failure as a step toward success without fear of embarrassment 
+
+-A chance to iterate unlimited ideas and discover what it means to be on a roll
+</p>
     </Card>
   </Box>
   );

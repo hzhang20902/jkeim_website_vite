@@ -27,18 +27,7 @@ export default function Contact() {
       <Card className='fadeLeftMini' variant="outlined" raised sx={{backgroundColor: "#FFC363", width: 'auto'}}>{card}</Card>
       <h1 className='fadeRightMini'>About The Director</h1>
       <Card className='descrip' variant="outlined" raised sx={{backgroundColor: "#FFC363", width: '75%'}}>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rhoncus ipsum nec dolor rutrum fringilla. 
-            Suspendisse maximus bibendum lorem, in feugiat diam viverra at. 
-            Quisque rhoncus molestie lacinia. Vivamus purus lectus, tincidunt quis sollicitudin quis, pretium iaculis erat. 
-            Vivamus sodales elementum tortor, sit amet sagittis neque efficitur ac. Nunc finibus hendrerit maximus. 
-            Mauris lacinia scelerisque mauris, nec dapibus ex laoreet sit amet. Nam vel justo eget diam facilisis eleifend ut vel erat. 
-            Quisque sit amet tempor nisl. Phasellus cursus placerat justo, sed sagittis orci congue sit amet. Phasellus convallis ante finibus finibus maximus. 
-            Pellentesque non efficitur arcu, lacinia egestas nulla. Duis imperdiet risus ante. Morbi sem magna, dignissim quis pharetra vitae, 
-            gravida sit amet velit. Curabitur eu luctus libero. Curabitur et laoreet massa. Vestibulum egestas maximus mi eu ultricies. 
-            Pellentesque lacinia auctor nisl, et dictum nibh pharetra sit amet.
-            Maecenas quis justo neque. Sed euismod finibus aliquet. Aenean tempus ultrices nibh, vitae cursus mauris lacinia non. 
-            Suspendisse ac ligula urna. Nam eu ante sagittis felis convallis tincidunt. Ut ullamcorper nibh eu erat molestie placerat. 
-            Donec nibh diam, aliquet a erat sit amet, rhoncus congue sem. Donec id vulputate elit.</p>
+        <p>Joseph grew up in his dad’s music school, Loudoun Music Instruction, and was surrounded by music from birth. Placed in a band with his father’s advanced music students, Joseph had the opportunity to perform at music festivals and large venues like the Rock and Roll Hall of Fame at age 12. Joseph left his job bussing tables and began teaching drum lessons at age 15 for Loudoun Music Instruction. At age 16 Joseph won the Percussive Arts Society Drum Competition in Centreville, VA and was awarded a scholarship to the “National Jazz Workshop'' at Shenandoah University. He was placed in Alan Baylock’s orchestra and performed at the Arlington Jazz Festival in 2014. Later Joseph was awarded the “Promising Artist” scholarship to attend an undergraduate studies of music program at the University of the Arts in Philadelphia. Halfway through the program, Joseph left the University to tour internationally with several artists, Including Saleka Shyamalan, Ryan Tennis, and Bakithi Kumalo. Joseph has performed at music festivals like Austin City limits, Music Midtown, and Bonnaroo as well as on the Kelly Clarkson show. As a recording artist, Joseph has recorded drums for Apple TV series, Servant. Around this time, Joseph modeled his own drum lessons business after his father’s music school and founded, “Philly Rhythm.” Register your student or yourself in drum lessons with Joseph today!</p>
       </Card>
     </Box>
   );

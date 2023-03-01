@@ -7,6 +7,11 @@ import s3 from './stock3.jpeg'
 import s4 from './stock4.jpeg'
 import s5 from './stock5.jpeg'
 import t1 from './tourphoto1.jpeg'
+import t2 from './tour2.jpeg'
+import t3 from './tour4.jpeg'
+import t4 from './tour4.jpeg'
+import t5 from './tour5.jpeg'
+import t6 from './tour6.jpeg'
 import b1 from './band1.jpeg'
 import err from './404page.webp'
 
@@ -21,5 +26,10 @@ export default {
     s4,
     s5,
     t1,
+    t2,
+    t3,
+    t4,
+    t5,
+    t6,
     err
 }
