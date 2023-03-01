@@ -33,8 +33,13 @@ Write music
 Keep time in different time signatures 
 Improvise
 Play a variety of genres and styles
-Philly Rhythm's core purpose is to ignite a passion for learning. We believe that continuous improvement is a lifestyle. At this school, students don't wait to be great. They funnel passion and curiosity into the tank of discipline that fuels a culture of excellence. Students are given opportunities that are handpicked according to their needs. Opportunities include joining an ensemble, performing live, starring in drum cover videos, and more. Register your student here.
+Philly Rhythm's core purpose is to ignite a passion for learning. We believe that continuous improvement is a lifestyle. At this school, students don't wait to be great. 
+They funnel passion and curiosity into the tank of discipline that fuels a culture of excellence. 
+Students are given opportunities that are handpicked according to their needs. 
+Opportunities include joining an ensemble, performing live, starring in drum cover videos, and more. Register your student today!
+</p>
 <b />
+<p>
 Philly Rhythm is…
 <b />
 -An environment where students feel valued and know their efforts matter. 
