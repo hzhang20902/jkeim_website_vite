@@ -114,10 +114,10 @@ const onSubmit = async (data: any) => {
 };
 
   return (
-    <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', objectFit: 'fill', width: '100%'}}>
-      <h1 className='fadeRightMini'>Sign Up Today!</h1>
+    <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', width: '100%'}}>
+
     
-           <Card className='fadeLeftMini' variant="outlined" raised sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', padding: '3em', backgroundColor: "#FFC363"}}>
+           <Card variant="outlined" raised sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', padding: '3em', backgroundColor: "#FFC363", zIndex: 0}}>
             <h3>Contact Info:</h3>
            <form onSubmit={handleSubmit(onSubmit)}>
               <TextField

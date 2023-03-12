@@ -25,7 +25,7 @@ export default function ErrorPage() {
       
   return (
     <Box sx={{paddingTop:'7em', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', objectFit: 'fill', width: '100%'}}>
-        <h1>Lost but not forgotten... <br/><a href='/'>Home</a></h1>
+        <h1><a href='/'>Home</a></h1>
       <Card variant="outlined" raised sx={{margin: '10px', backgroundColor: "#FFC363", width: 'auto'}}>{card}</Card>
     </Box>
   );

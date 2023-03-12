@@ -24,7 +24,7 @@ footer {
   flex: 1;
   padding: 1em;
   width: 100%;
-  opacity: 0.3;
+  opacity: 0.2;
   color: #5E2315;
   /* border-top: 1px solid #5E2315; */
   justify-content: center;
@@ -32,6 +32,11 @@ footer {
   position: fixed;
   bottom: 0;
   left: 0;
+}
+
+ul {
+  display: inline-block;
+  text-align: left;
 }
 
 .images {
@@ -119,7 +124,7 @@ p {
 
 @media (max-width: 600px){
   p {
-  font-size: x-small;
+  font-size: small;
   }
 }
 

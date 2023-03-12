@@ -18,13 +18,13 @@ export default function Appbar() {
   return (
     <Box sx={{ flexGrow: 1, left: 0, top: 0, width: 'auto', zIndex: 1}}>
       <AppBar elevation={0} sx={{backgroundColor: '#FFFFE8' }}>
-        <Toolbar sx={{display: 'flex', justifyContent: 'space-between', paddingX: '20%', width: 'auto'}}>
+        <Toolbar sx={{display: 'flex', justifyContent: 'space-between', paddingX: '10%', width: 'auto'}}>
             
             <Sidebar />
 
             <Link href='/register'>
                 <Button color="inherit" className='cart'>
-                    <IoMdSchool style={{color:'#FFC363'}} size='medium'/>
+                    <IoMdSchool style={{color:'#FFC363'}} size={30}/>
                 </Button>
             </Link>
 
@@ -33,9 +33,9 @@ export default function Appbar() {
             </Link>
 
             <Link href='/contact'>
-                <Button color="inherit" className='cart'>
-                    <SiGmail style={{color:'#FFC363'}} size='medium'/>    
-                </Button>
+            <Button color="inherit" className='cart'>
+                <SiGmail style={{color:'#FFC363'}} size={30}/>
+            </Button>
             </Link>
             <Button color="inherit" className='cart'>
                 <Tooltip title='Coming soon!'>
