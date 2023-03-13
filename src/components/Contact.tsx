@@ -1,7 +1,9 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
+import {
+  Box,
+  Card,
+  CardContent
+} from '@mui/material'
 import { Headshot } from './Images';
 
 const card = (
@@ -44,7 +46,10 @@ export default function Contact() {
           He was placed in Alan Baylock's orchestra and performed at the Arlington Jazz Festival in 2014. 
           Later Joseph was awarded the “Promising Artist” scholarship to attend an undergraduate studies of music program at the University of the Arts in Philadelphia. 
         </p>
-          <p><a href='/register'>Sign up</a> your student for drum lessons with Joseph today!</p>
+        <p>
+          Contact Joseph directly by clicking <a href='mailto:phillyrhythm@gmail.com?subject=Direct Inquiry from Philly Rhythm'>here</a> or...
+        </p>
+          <p><a href='/register'>Sign up</a> your student for drum lessons today!</p>
       </Card>
     </Box>
   );

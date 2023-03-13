@@ -14,6 +14,9 @@ import t5 from './tour5.jpeg'
 import t6 from './tour6.jpeg'
 import b1 from './band1.jpeg'
 import err from './404page.webp'
+import tr1 from './asItWas.pdf'
+import tr2 from './bruno.pdf'
+import tr3 from './locoCon.pdf'
 
 export default {
     b1,
@@ -31,5 +34,8 @@ export default {
     t4,
     t5,
     t6,
-    err
+    err,
+    tr1,
+    tr2,
+    tr3
 }

@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
-import Box from '@mui/material/Box';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
+import {
+  Box,
+  Card,
+  CardContent
+} from '@mui/material'
 import { About } from './Images';
 
 const card = (
@@ -27,6 +29,17 @@ export default function School() {
     <Card className='fadeLeftMini' variant="outlined" raised sx={{margin: '10px', backgroundColor: "#FFC363", width: 'auto'}}>{card}</Card>
     <h1 className='fadeRightMini'>About The Program</h1>
     <Card className='descrip' variant="outlined" raised sx={{backgroundColor: "#FFC363"}}>
+    <p>
+    Philly Rhythm is…
+        <ul>
+        
+        <li>An environment where students feel valued and know their efforts matter.</li>
+        <li>An opportunity to experience failure as a step toward success without fear of embarrassment.</li>
+        <li>A chance to iterate unlimited ideas and discover what it means to be on a roll!</li>
+        </ul>
+        </p>
+    </Card>
+    <Card className='descrip' variant="outlined" raised sx={{backgroundColor: "#FFC363"}}>
       <p>Philly Rhythm was established by Joseph Keim in 2021. Students receive weekly, private lessons and are groomed not only to become better musicians, but better problem solvers, communicators, and leaders. After only a few drum lessons, students will know how to:
         <ul>
           <li>Read music</li>
@@ -41,14 +54,6 @@ export default function School() {
         They funnel passion and curiosity into the tank of discipline that fuels a culture of excellence. 
         Students are given opportunities that are handpicked according to their needs. 
         Opportunities include joining an ensemble, performing live, starring in drum cover videos, and more. <a href='/register'>Sign up</a> your student today!
-        </p>
-        <p>
-        <ul>
-        Philly Rhythm is…
-        <li>An environment where students feel valued and know their efforts matter.</li>
-        <li>An opportunity to experience failure as a step toward success without fear of embarrassment.</li>
-        <li>A chance to iterate unlimited ideas and discover what it means to be on a roll!</li>
-        </ul>
         </p>
     </Card>
   </Box>

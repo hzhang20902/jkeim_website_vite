@@ -45,6 +45,11 @@ ul {
   object-fit: cover;
 }
 
+.pdf {
+  display: block;
+  object-fit: cover;
+}
+
 @media (max-width: 600px){
   .images {
     height: 33vh;
@@ -120,6 +125,7 @@ ul {
 
 p {
   color: #5E2315;
+  font-size: x-large;
 }
 
 @media (max-width: 600px){

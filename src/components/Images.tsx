@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { Document, Page } from 'react-pdf/dist/esm/entry.vite'
 import { ScrollMenu } from "react-horizontal-scrolling-menu";
 import { Box } from "@mui/material";
 import assets from '../assets'
@@ -61,4 +62,72 @@ export const NotFound = () => {
     </ScrollMenu>
     </React.Fragment>
     )
+}
+
+export const Transcription = ({ transcription, link }: any) => {
+  const [numPages, setNumPages] = useState(1);
+  const [pageNumber, setPageNumber] = useState(1);
+  const downloadButton = () => {
+    fetch(transcription).then(res => {
+      res.blob().then(blob => {
+        const fileURL = window.URL.createObjectURL(blob);
+        let alink = document.createElement('a')
+        alink.href = fileURL
+        alink.download = transcription
+        alink.click()
+      })
+    })
+  }
+
+  function onDocumentLoadSuccess({ numPages }: any) {
+    setNumPages(numPages);
+    setPageNumber(1);
+  }
+
+  function changePage(offset:any) {
+    setPageNumber((prevPageNumber)=> prevPageNumber + offset);
+  }
+
+  function previousPage() {
+    changePage(-1);
+  }
+
+  function nextPage() {
+    changePage(1);
+  }
+
+  return (
+    <React.Fragment>
+      <Document
+      className='pdf'
+        file={transcription}
+        onLoadSuccess={onDocumentLoadSuccess}
+      >
+        <Page pageNumber={pageNumber} renderAnnotationLayer={false} />
+      </Document>
+      <div>
+        <p>
+          Page {pageNumber || (numPages ? 1 : '--')} of {numPages || '--'}
+        </p>
+        <button
+          type="button"
+          disabled={pageNumber <= 1}
+          onClick={previousPage}
+        >
+          Previous
+        </button>
+        <button
+          type="button"
+          disabled={pageNumber >= numPages}
+          onClick={nextPage}
+        >
+          Next
+        </button>
+        <button type='button' onClick={downloadButton}>
+          Free Download
+        </button>
+      </div>
+    </React.Fragment>
+  );
+    
 }
